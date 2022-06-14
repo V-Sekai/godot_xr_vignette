@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://byysornjvcums"]
+
+[ext_resource type="Shader" path="res://addons/xr_tunneling/tunneling.gdshader" id="1_n3lan"]
+[ext_resource type="Texture2D" uid="uid://djewyenvwv7jr" path="res://addons/xr_tunneling/horizon.png" id="2_24upc"]
+
+[resource]
+render_priority = -100
+shader = ExtResource( "1_n3lan" )
+shader_param/albedo_texture = ExtResource( "2_24upc" )
+shader_param/current_fade_fov = 6.5
+shader_param/current_fov = 100.0
+shader_param/iris_distance = 5.0
+shader_param/vignette_alpha = 1.0

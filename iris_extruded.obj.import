@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bco58iq46r17e"
+path="res://.godot/imported/iris_extruded.obj-f52a6d43ca9850fdd33f9c3b78e00fd6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/iris_extruded.obj-f52a6d43ca9850fdd33f9c3b78e00fd6.mesh"]
+
+source_file="res://addons/xr_tunneling/iris_extruded.obj"
+dest_files=["res://.godot/imported/iris_extruded.obj-f52a6d43ca9850fdd33f9c3b78e00fd6.mesh", "res://.godot/imported/iris_extruded.obj-f52a6d43ca9850fdd33f9c3b78e00fd6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
