@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dcsmq1pt5n3lx"]
 
-[ext_resource type="Shader" path="res://addons/xr_tunneling/tunneling_depth.gdshader" id="1_3i6m6"]
+[ext_resource type="Shader" path="res://addons/xr_vignette/tunneling_depth.gdshader" id="1_3i6m6"]
 
 [resource]
 render_priority = -100

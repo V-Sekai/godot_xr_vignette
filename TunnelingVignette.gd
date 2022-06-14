@@ -2,9 +2,9 @@
 class_name TunnelingVignette
 extends MeshInstance3D
 
-var iris_mesh_const: Mesh = load("res://addons/xr_tunneling/iris_extruded.obj") as Mesh
-var iris_color_mat_const: ShaderMaterial = load("res://addons/xr_tunneling/iris_gradient_mat.tres") as ShaderMaterial
-var iris_depth_mat_const: ShaderMaterial = load("res://addons/xr_tunneling/iris_depth_mat.tres") as ShaderMaterial
+var iris_mesh_const: Mesh = load("res://addons/xr_vignette/iris_extruded.obj") as Mesh
+var iris_color_mat_const: ShaderMaterial = load("res://addons/xr_vignette/iris_gradient_mat.tres") as ShaderMaterial
+var iris_depth_mat_const: ShaderMaterial = load("res://addons/xr_vignette/iris_depth_mat.tres") as ShaderMaterial
 
 var iris_color_mat_inst: ShaderMaterial = iris_color_mat_const.duplicate() as ShaderMaterial
 var iris_depth_mat_inst: ShaderMaterial = iris_depth_mat_const.duplicate() as ShaderMaterial
