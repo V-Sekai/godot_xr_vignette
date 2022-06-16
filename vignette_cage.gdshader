@@ -45,7 +45,7 @@ void vertex () {
 	}
 	vignette_pixel = vec2(cos(PI / 180.0 * (current_fov + 3.0 * current_fade_fov) * 0.5f),
 		cos(PI / 180.0 * current_fov * 0.5f));
-	VERTEX = (EYE_MATRIX * vec4(mat3(VIEW_MATRIX) * mat3(MODEL_MATRIX) * VERTEX, 1)).xyz;
+	VERTEX = (MODELVIEW_MATRIX * inverse(VIEW_MATRIX * MODEL_MATRIX) * vec4(mat3(VIEW_MATRIX) * mat3(MODEL_MATRIX) * VERTEX, 1)).xyz;
 	view_dot_camera = normalize(-VERTEX).z;
 
 	alpha = pow(COLOR.r, 2.2);
