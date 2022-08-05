@@ -6,22 +6,22 @@ var vignette_cage_mat_inst: ShaderMaterial
 @export var cage_color: Color = Color.WHITE:
 	set(x):
 		cage_color = x
-		vignette_cage_mat_inst.set_shader_param(&"cage_color", cage_color)
+		vignette_cage_mat_inst.set_shader_uniform(&"cage_color", cage_color)
 
 @export_range(0.0, 1.0) var vignette_alpha: float = 1.0:
 	set(x):
 		vignette_alpha = x
-		vignette_cage_mat_inst.set_shader_param(&"vignette_alpha", vignette_alpha)
+		vignette_cage_mat_inst.set_shader_uniform(&"vignette_alpha", vignette_alpha)
 
 @export_range(0.0, 30.0, 0.1) var current_fade_fov: float = 6.5:
 	set(x):
 		current_fade_fov = x
-		vignette_cage_mat_inst.set_shader_param(&"current_fade_fov", current_fade_fov)
+		vignette_cage_mat_inst.set_shader_uniform(&"current_fade_fov", current_fade_fov)
 
 @export_exp_easing("attenuation") var current_fov: float = 100.0:
 	set(x):
 		current_fov = clamp(x, 0.0, 160.0)
-		vignette_cage_mat_inst.set_shader_param(&"current_fov", current_fov)
+		vignette_cage_mat_inst.set_shader_uniform(&"current_fov", current_fov)
 
 func _init():
 	var cage_mesh_const: Mesh = load("res://addons/xr_vignette/cage.obj") as Mesh
@@ -38,4 +38,4 @@ func update_transforms(xr_origin_node: Node3D, xr_camera_node: Node3D):
 	var pos_vector = xr_camera_node.global_transform.origin.round() - (xr_camera_node.transform.origin - xr_camera_node.transform.origin.floor())
 	pos_vector.y = xr_camera_node.global_transform.origin.y
 	self.transform = Transform3D(xr_origin_node.global_transform.basis, pos_vector)
-	vignette_cage_mat_inst.set_shader_param(&"floor_offset", xr_camera_node.transform.origin.y) #  - pos_vector.y)
+	vignette_cage_mat_inst.set_shader_uniform(&"floor_offset", xr_camera_node.transform.origin.y) #  - pos_vector.y)
