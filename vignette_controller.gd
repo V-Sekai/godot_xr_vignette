@@ -81,7 +81,6 @@ func _process(delta: float):
 	running_camera_xforms.insert(0, xr_camera_node.transform)
 
 	if len(running_timestamps) > 1:
-		var time_diff = running_timestamps[0] - running_timestamps[-1]
 		var camera_origin_diff: Vector3 = (running_camera_xforms[0].origin - running_camera_xforms[-1].origin)
 		var camera_basis_diff: Basis = running_camera_xforms[-1].basis.inverse() * running_camera_xforms[0].basis
 		camera_origin_diff.y = 0
