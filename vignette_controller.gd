@@ -119,8 +119,8 @@ func _process(delta: float):
 		if new_cage_visible != vignette_cage.visible:
 			vignette_cage.visible = new_cage_visible
 
-		var calculated_move_fov: float = lerp(0, move_vignette_fov_deg, move_vignette_amount)
-		var calculated_rotate_fov: float = lerp(0, rotate_vignette_fov_deg, rotate_vignette_amount)
+		var calculated_move_fov: float = lerpf(0, move_vignette_fov_deg, move_vignette_amount)
+		var calculated_rotate_fov: float = lerpf(0, rotate_vignette_fov_deg, rotate_vignette_amount)
 		var calculated_fov = max(iris_fov_limit, xr_camera_node.fov - max(calculated_move_fov, calculated_rotate_fov))
 		var calculated_alpha: float = vignette_alpha
 
