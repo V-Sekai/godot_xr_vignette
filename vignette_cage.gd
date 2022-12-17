@@ -23,6 +23,7 @@ var vignette_cage_mat_inst: ShaderMaterial
 		current_fov = clamp(x, 0.0, 160.0)
 		vignette_cage_mat_inst.set_shader_parameter(&"current_fov", current_fov)
 
+
 func _init():
 	var cage_mesh_const: Mesh = load("res://addons/xr_vignette/cage.obj") as Mesh
 	var vignette_cage_mat_const: ShaderMaterial = load("res://addons/xr_vignette/vignette_cage_mat.tres") as ShaderMaterial
@@ -33,9 +34,10 @@ func _init():
 	material_override = vignette_cage_mat_inst
 	top_level = true
 
+
 func update_transforms(xr_origin_node: Node3D, xr_camera_node: Node3D):
 	self.top_level = true
 	var pos_vector = xr_camera_node.global_transform.origin.round() - (xr_camera_node.transform.origin - xr_camera_node.transform.origin.floor())
 	pos_vector.y = xr_camera_node.global_transform.origin.y
 	self.transform = Transform3D(xr_origin_node.global_transform.basis, pos_vector)
-	vignette_cage_mat_inst.set_shader_parameter(&"floor_offset", xr_camera_node.transform.origin.y) #  - pos_vector.y)
+	vignette_cage_mat_inst.set_shader_parameter(&"floor_offset", xr_camera_node.transform.origin.y)  #  - pos_vector.y)

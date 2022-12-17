@@ -26,11 +26,13 @@ var vignette_cage: MeshInstance3D
 @export var move_vignette_fov_deg: float = 20.0
 @export var vignette_rotate_thresh_deg: Vector2 = Vector2(0.0, 1.0)
 @export var rotate_vignette_fov_deg: float = 30.0
-const iris_fov_limit = 30.0 # Can't go smaller than this.
+const iris_fov_limit = 30.0  # Can't go smaller than this.
+
 
 func _init():
 	vignette_tunneling = vignette_tunneling_const.new()
 	vignette_cage = vignette_cage_const.new()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -42,7 +44,7 @@ func _ready():
 	add_child(vignette_tunneling)
 	vignette_cage.owner = self
 	vignette_tunneling.owner = self
-	if false: # Debug child nodes in Scene hierarchy:
+	if false:  # Debug child nodes in Scene hierarchy:
 		self.scene_file_path = "res://test.tscn"
 		self.owner.set_editable_instance(self, true)
 
@@ -56,14 +58,15 @@ var current_fadeout_move_delay: float = 0
 var current_fadeout_rotate_amount: float = 0
 var current_fadeout_rotate_delay: float = 0
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
 	current_fadeout_move_delay -= delta
 	if current_fadeout_move_delay <= 0:
-		current_fadeout_move_amount = max(0.0, current_fadeout_move_amount - delta/fadeout_time)
+		current_fadeout_move_amount = max(0.0, current_fadeout_move_amount - delta / fadeout_time)
 	current_fadeout_rotate_delay -= delta
 	if current_fadeout_rotate_delay <= 0:
-		current_fadeout_rotate_amount = max(0.0, current_fadeout_rotate_amount - delta/fadeout_time)
+		current_fadeout_rotate_amount = max(0.0, current_fadeout_rotate_amount - delta / fadeout_time)
 
 	virtual_timestamp += delta
 	var count_to_remove: int = 0
@@ -81,7 +84,7 @@ func _process(delta: float):
 	running_camera_xforms.insert(0, xr_camera_node.transform)
 
 	if len(running_timestamps) > 1:
-		var camera_origin_diff: Vector3 = (running_camera_xforms[0].origin - running_camera_xforms[-1].origin)
+		var camera_origin_diff: Vector3 = running_camera_xforms[0].origin - running_camera_xforms[-1].origin
 		var camera_basis_diff: Basis = running_camera_xforms[-1].basis.inverse() * running_camera_xforms[0].basis
 		camera_origin_diff.y = 0
 		var origin_origin_diff: Vector3 = xr_origin_node.transform.basis * (running_origin_xforms[0].origin - running_origin_xforms[-1].origin)

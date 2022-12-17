@@ -27,6 +27,7 @@ var iris_depth_mat_inst: ShaderMaterial
 		iris_color_mat_inst.set_shader_parameter(&"current_fov", current_fov)
 		iris_depth_mat_inst.set_shader_parameter(&"current_fov", current_fov)
 
+
 func _init():
 	var iris_mesh_const: Mesh = load("res://addons/xr_vignette/iris_extruded.obj") as Mesh
 	var iris_color_mat_const: ShaderMaterial = load("res://addons/xr_vignette/iris_gradient_mat.tres") as ShaderMaterial
@@ -37,4 +38,3 @@ func _init():
 	mesh = iris_mesh_const
 	transform = Transform3D.IDENTITY
 	material_override = iris_color_mat_inst
-
