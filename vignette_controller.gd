@@ -7,8 +7,8 @@ const vignette_cage_const = preload("./vignette_cage.gd")
 var vignette_tunneling: MeshInstance3D
 var vignette_cage: MeshInstance3D
 
-@export_node_path(XROrigin3D) var xr_origin: NodePath = NodePath("../..")
-@export_node_path(XRCamera3D) var xr_camera: NodePath = NodePath("..")
+@export_node_path("XROrigin3D") var xr_origin: NodePath = NodePath("../..")
+@export_node_path("XRCamera3D") var xr_camera: NodePath = NodePath("..")
 @onready var xr_origin_node: XROrigin3D = get_node(xr_origin)
 @onready var xr_camera_node: XRCamera3D = get_node(xr_camera)
 

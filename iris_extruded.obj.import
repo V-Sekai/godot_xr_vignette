@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bco58iq46r17e"
-path="res://.godot/imported/iris_extruded.obj-55c5af1824787a3be3bed959ef1fcb17.mesh"
+path="res://.godot/imported/iris_extruded.obj-7b7827fff0bf3f7804424055d98381f3.mesh"
 
 [deps]
 
-files=["res://.godot/imported/iris_extruded.obj-55c5af1824787a3be3bed959ef1fcb17.mesh"]
+files=["res://.godot/imported/iris_extruded.obj-7b7827fff0bf3f7804424055d98381f3.mesh"]
 
-source_file="res://xr_vignette/iris_extruded.obj"
-dest_files=["res://.godot/imported/iris_extruded.obj-55c5af1824787a3be3bed959ef1fcb17.mesh", "res://.godot/imported/iris_extruded.obj-55c5af1824787a3be3bed959ef1fcb17.mesh"]
+source_file="res://addon/xr_vignette/iris_extruded.obj"
+dest_files=["res://.godot/imported/iris_extruded.obj-7b7827fff0bf3f7804424055d98381f3.mesh", "res://.godot/imported/iris_extruded.obj-7b7827fff0bf3f7804424055d98381f3.mesh"]
 
 [params]
 

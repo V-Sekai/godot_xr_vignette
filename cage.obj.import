@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b7g4un623bsdy"
-path="res://.godot/imported/cage.obj-abd2f1a28ff27d9269345fac401aafe3.mesh"
+path="res://.godot/imported/cage.obj-b88f9ec091e22dd99c0bff2456b7b4ce.mesh"
 
 [deps]
 
-files=["res://.godot/imported/cage.obj-abd2f1a28ff27d9269345fac401aafe3.mesh"]
+files=["res://.godot/imported/cage.obj-b88f9ec091e22dd99c0bff2456b7b4ce.mesh"]
 
-source_file="res://xr_vignette/cage.obj"
-dest_files=["res://.godot/imported/cage.obj-abd2f1a28ff27d9269345fac401aafe3.mesh", "res://.godot/imported/cage.obj-abd2f1a28ff27d9269345fac401aafe3.mesh"]
+source_file="res://addon/xr_vignette/cage.obj"
+dest_files=["res://.godot/imported/cage.obj-b88f9ec091e22dd99c0bff2456b7b4ce.mesh", "res://.godot/imported/cage.obj-b88f9ec091e22dd99c0bff2456b7b4ce.mesh"]
 
 [params]
 
