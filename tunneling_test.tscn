@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://biya3dbyjj0j"]
 
 [ext_resource type="ArrayMesh" uid="uid://bco58iq46r17e" path="res://addons/xr_vignette/iris_extruded.obj" id="1_454t2"]
 [ext_resource type="Texture2D" uid="uid://djewyenvwv7jr" path="res://addons/xr_vignette/horizon.png" id="3_csvg4"]
@@ -23,29 +23,27 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_do6if"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovvh7"]
 render_priority = -100
-shader = ExtResource( "4_rd343" )
-shader_param/albedo_texture = ExtResource( "3_csvg4" )
-shader_param/current_fade_fov = 6.5
-shader_param/current_fov = 80.0
-shader_param/iris_distance = 5.0
-shader_param/vignette_alpha = 1.0
+shader = ExtResource("4_rd343")
+shader_parameter/current_fov = 100.0
+shader_parameter/current_fade_fov = 6.5
+shader_parameter/iris_distance = 5.0
+shader_parameter/vignette_alpha = 1.0
+shader_parameter/albedo_texture = ExtResource("3_csvg4")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4yyjc"]
 sky_curve = 0.117688
-sky_energy = 2.16
 ground_bottom_color = Color(0.419608, 0.376471, 0.329412, 1)
 ground_horizon_color = Color(0.988235, 0.988235, 0.988235, 1)
 ground_curve = 0.0131951
-ground_energy = 1.37
 
 [sub_resource type="Sky" id="Sky_urmak"]
-sky_material = SubResource( "ProceduralSkyMaterial_4yyjc" )
+sky_material = SubResource("ProceduralSkyMaterial_4yyjc")
 
 [sub_resource type="Environment" id="Environment_12o2q"]
 background_mode = 2
-sky = SubResource( "Sky_urmak" )
+sky = SubResource("Sky_urmak")
 tonemap_exposure = 1.35
 sdfgi_use_occlusion = true
 sdfgi_bounce_feedback = 1.99
@@ -72,21 +70,21 @@ transform = Transform3D(-0.501511, 0, -0.865151, 0, 1, 0, 0.865151, 0, -0.501511
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
 transform = Transform3D(-0.993015, 0, -0.117988, 0, 1, 0, 0.117988, 0, -0.993015, -0.0120198, 0.528391, -2.46048)
 fov = 80.0
-script = SubResource( "GDScript_ipw26" )
+script = SubResource("GDScript_ipw26")
 
 [node name="TunnelingVignette" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D"]
-material_override = SubResource( "ShaderMaterial_do6if" )
+material_override = SubResource("ShaderMaterial_ovvh7")
 extra_cull_margin = 1.0
-mesh = ExtResource( "1_454t2" )
+mesh = ExtResource("1_454t2")
 skeleton = NodePath("../../..")
-script = ExtResource( "3_ymkbd" )
+script = ExtResource("3_ymkbd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.355205, 0.934788, 0, -0.934788, -0.355205, 0, 0, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( "Environment_12o2q" )
+environment = SubResource("Environment_12o2q")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-mesh = SubResource( "BoxMesh_6kfh0" )
+mesh = SubResource("BoxMesh_6kfh0")

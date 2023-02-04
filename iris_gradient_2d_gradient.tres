@@ -5,7 +5,7 @@ offsets = PackedFloat32Array(0.640288, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.650128, 0.650128, 0.650128, 1)
 
 [resource]
-gradient = SubResource( "Gradient_tkmh6" )
+gradient = SubResource("Gradient_tkmh6")
 width = 256
 height = 256
 fill_from = Vector2(0, 0.365385)
