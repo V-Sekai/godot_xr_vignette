@@ -5,9 +5,9 @@
 
 [resource]
 render_priority = -100
-shader = ExtResource( "1_n3lan" )
-shader_param/albedo_texture = ExtResource( "2_24upc" )
-shader_param/current_fade_fov = 6.5
-shader_param/current_fov = 100.0
-shader_param/iris_distance = 5.0
-shader_param/vignette_alpha = 1.0
+shader = ExtResource("1_n3lan")
+shader_parameter/current_fov = 100.0
+shader_parameter/current_fade_fov = 6.5
+shader_parameter/iris_distance = 5.0
+shader_parameter/vignette_alpha = 1.0
+shader_parameter/albedo_texture = ExtResource("2_24upc")

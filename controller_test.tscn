@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dishluheia2u4"]
+[gd_scene load_steps=3 format=3 uid="uid://dishluheia2u4"]
 
 [ext_resource type="Script" path="res://addons/xr_vignette/vignette_controller.gd" id="7_imwy0"]
 
@@ -24,13 +24,12 @@ func _process(delta):
 
 [node name="ARVRCamera" type="XRCamera3D" parent="."]
 transform = Transform3D(0.571315, 0, 0.820731, 0, 1, 0, -0.820731, 0, 0.571315, 0, 0, 0)
-script = SubResource( "GDScript_ipw26" )
+script = SubResource("GDScript_ipw26")
 
 [node name="VignetteController" type="Node3D" parent="ARVRCamera"]
 process_priority = 1000000
-script = ExtResource( "7_imwy0" )
+script = ExtResource("7_imwy0")
 fade_fov = 10.0
-preview_vignette = 0.0
 running_average_interval = 0.0
 fadeout_delay = 0.5
 vignette_move_thresh = Vector2(0.01, 0.02)

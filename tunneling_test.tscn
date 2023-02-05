@@ -23,7 +23,7 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovvh7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t52lg"]
 render_priority = -100
 shader = ExtResource("4_rd343")
 shader_parameter/current_fov = 100.0
@@ -73,7 +73,7 @@ fov = 80.0
 script = SubResource("GDScript_ipw26")
 
 [node name="TunnelingVignette" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D"]
-material_override = SubResource("ShaderMaterial_ovvh7")
+material_override = SubResource("ShaderMaterial_t52lg")
 extra_cull_margin = 1.0
 mesh = ExtResource("1_454t2")
 skeleton = NodePath("../../..")

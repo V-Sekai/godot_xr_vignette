@@ -4,9 +4,9 @@
 
 [resource]
 render_priority = 127
-shader = ExtResource( "1_6xfsy" )
-shader_param/cage_color = Color(1, 1, 1, 1)
-shader_param/current_fade_fov = 6.5
-shader_param/current_fov = 100.0
-shader_param/floor_offset = 0.0
-shader_param/vignette_alpha = 1.0
+shader = ExtResource("1_6xfsy")
+shader_parameter/cage_color = Color(1, 1, 1, 1)
+shader_parameter/current_fov = 100.0
+shader_parameter/current_fade_fov = 6.5
+shader_parameter/vignette_alpha = 1.0
+shader_parameter/floor_offset = 0.0
