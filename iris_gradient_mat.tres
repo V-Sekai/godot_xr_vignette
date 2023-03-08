@@ -1,7 +1,13 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://byysornjvcums"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://byysornjvcums"]
 
 [ext_resource type="Shader" path="res://addons/xr_vignette/tunneling.gdshader" id="1_n3lan"]
-[ext_resource type="Texture2D" uid="uid://djewyenvwv7jr" path="res://addons/xr_vignette/horizon.png" id="2_24upc"]
+
+[sub_resource type="Gradient" id="Gradient_3b252"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ne6tk"]
+gradient = SubResource("Gradient_3b252")
 
 [resource]
 render_priority = -100
@@ -10,4 +16,4 @@ shader_parameter/current_fov = 100.0
 shader_parameter/current_fade_fov = 6.5
 shader_parameter/iris_distance = 5.0
 shader_parameter/vignette_alpha = 1.0
-shader_parameter/albedo_texture = ExtResource("2_24upc")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_ne6tk")

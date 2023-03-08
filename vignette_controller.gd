@@ -13,10 +13,10 @@ var vignette_cage: MeshInstance3D
 @onready var xr_camera_node: XRCamera3D = get_node(xr_camera)
 
 @export var enable_tunnel: bool = true
-@export var enable_cage: bool = true
+@export var enable_cage: bool = false
 
-@export var cage_color: Color = Color.LIGHT_GRAY
-@export var fade_fov: float = 6.5
+@export var cage_color: Color = Color.BLACK
+@export var fade_fov: float = 30
 @export_range(0.0, 1.0) var preview_vignette: float = 0
 @export var running_average_interval: float = 0.1
 @export var fadeout_time: float = 0.1
@@ -25,7 +25,7 @@ var vignette_cage: MeshInstance3D
 @export var vignette_move_thresh: Vector2 = Vector2(0.0, 2.0)
 @export var move_vignette_fov_deg: float = 20.0
 @export var vignette_rotate_thresh_deg: Vector2 = Vector2(0.0, 1.0)
-@export var rotate_vignette_fov_deg: float = 30.0
+@export var rotate_vignette_fov_deg: float = 20.0
 const iris_fov_limit = 30.0  # Can't go smaller than this.
 
 
